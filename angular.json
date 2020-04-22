@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practica01": {
+    "-observablesRxjs": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practica01",
+            "outputPath": "dist/-observablesRxjs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "practica01:build"
+            "browserTarget": "-observablesRxjs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "practica01:build:production"
+              "browserTarget": "-observablesRxjs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practica01:build"
+            "browserTarget": "-observablesRxjs:build"
           }
         },
         "test": {
@@ -110,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "practica01:serve"
+            "devServerTarget": "-observablesRxjs:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "practica01:serve:production"
+              "devServerTarget": "-observablesRxjs:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "practica01"
+    }
+  },
+  "defaultProject": "-observablesRxjs",
+  "cli": {
+    "analytics": false
+  }
 }
